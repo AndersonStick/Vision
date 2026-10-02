@@ -7,6 +7,9 @@ while True:
     if not ok:
         break
 
+    print(frame.shape)
+    frame[0:100, 0:100] = (0, 0, 255)   # filas 0-100, columnas 0-100 → rojo
+
     cv2.imshow("Camara", frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
